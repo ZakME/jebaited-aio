@@ -14,23 +14,12 @@ setInterval( () => {
 }, 5000);
 
 function checkNextBuild(buildNum) {
-    $.getJSON(proxyUrl + targetUrl, (data) => {
-        let bool = data.nextBuildNumber == buildNum;
-
-        setTime();
-        console.log((new Date()).getTime() + ' - is bukkit 1.16 here yet: ' + (bool?false:true));
-
-        if (!bool) {
-            return;
-        }
-        
-        $('#audio-jebait')[0].play();
-        $jebait.append($('<button>').text('Pause Audio').click(()=>$('#audio-jebait')[0].pause()));
-        $jebait.append('<br>')
+    $('#audio-jebait')[0].play();
+    $jebait.append($('<button>').text('Pause Audio').click(()=>$('#audio-jebait')[0].pause()));
+    $jebait.append('<br>')
         for (let i = 0; i < 45; i++) {
           $jebait.append($('<img>').attr('src','https://cdn.betterttv.net/emote/5b1740221c5a6065a7bad4b5/3x'));
         }
-    });
 }
 
 function checkAusTime() {
