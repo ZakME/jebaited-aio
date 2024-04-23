@@ -1,5 +1,5 @@
-let proxyUrl = 'https://cors-anywhere0.herokuapp.com/',
-    targetUrl = 'https://hub.spigotmc.org/jenkins/view/RSS/job/Bukkit-RSS/api/json',
+let proxyUrl = '',
+    targetUrl = '',
     nextBuild = 851
     $jebait = $('#jebait');
 
@@ -20,11 +20,9 @@ function checkNextBuild(buildNum) {
         setTime();
         console.log((new Date()).getTime() + ' - is bukkit 1.16 here yet: ' + (bool?false:true));
 
-        if (bool) {
+        if (!bool) {
             return;
         }
-        $('#status').text('YEP :)');
-        console.log('BROOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO IT\'S OUTsdfffffffffffffbdxkjhbfgsdkjbjkfshdbkjfbhdksjfbsdkjbsdkjhbsdkjfbsdkhbsdkbfsdkjkksfdkhbjdsf');
         
         $('#audio-jebait')[0].play();
         $jebait.append($('<button>').text('Pause Audio').click(()=>$('#audio-jebait')[0].pause()));
