@@ -11,7 +11,7 @@ setInterval( () => {
 }, 1000);
 setInterval( () => {
     checkNextBuild(nextBuild);
-}, 5000);
+}, 2000);
 
 function checkNextBuild(buildNum) {
     $('#audio-jebait')[0].play();
